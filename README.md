@@ -12,6 +12,7 @@ Project openen:
 
 Code style:
 1. Eslint is toegevoegd aan het project om ervoor te zorgen dat de code style gelijk is. Als je dubbele quotes gebruikt moet er een error komen. Dit wordt automatisch opgelost als je de code opslaat.
-2. Mocht dit niet het geval zijn, download dan de eslint extension in VSCode.
-3. Om minder problemen te hebben tijdens Pull/Merge Request, is het handig om je imports ascending te sorteren. Dit doe je door je imports te selecteren en vervolgens CTRL+Shift+P te klikken en vervolgens op sort lines ascending te klikken.
+2. Als de eslint niet goed wordt toegepast kan dit komen doordat je de Prettier extension hebt draaien in VSCode. Deze moet je dan uitzetten.
+3. Mocht dit niet het geval zijn, download dan de eslint extension in VSCode.
+4. Om minder problemen te hebben tijdens Pull/Merge Request, is het handig om je imports ascending te sorteren. Dit doe je door je imports te selecteren en vervolgens CTRL+Shift+P te klikken en vervolgens op sort lines ascending te klikken.
 ![image](https://github.com/Young-Innovative-Thinkers/NPOConnect/assets/75488878/08098778-b20a-4f0f-91f4-2140dc5caad5)
