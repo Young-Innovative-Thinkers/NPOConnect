@@ -11,6 +11,16 @@ Project openen:
 8. Voor Android gebruikers => open de Expo Go app en scan via daar de QR code
 9. Ik heb een opzet gemaakt, zodat iedereen gelijk aan de slag kan. Verwijder deze bestanden aub niet. Anders gaat de navigation stuk. Wijzig ook de naam van deze functies niet.
 10. Krijg je op je telefoon een melding te zien dat het openen van het project langer duurt dan normaal? Dan zou je dit kunnen oplossen door --tunnel te verwijderen in de package.json bij de start script.
+11. Binnen het project is master de default branch. Ga hier dus GEEN code naartoe pushen die nog niet is gecontroleerd door een teamgenoot. Maak hiervoor een nieuwe branch aan met de kopie van de master branch
+    ![image](https://github.com/Young-Innovative-Thinkers/NPOConnect/assets/75488878/30c6b2e6-e30e-4b54-8b5f-160963c498e3)
+    ![image](https://github.com/Young-Innovative-Thinkers/NPOConnect/assets/75488878/c73aa52b-c551-41ec-bef4-ccac6e3826f0)
+    ![image](https://github.com/Young-Innovative-Thinkers/NPOConnect/assets/75488878/6e131902-d841-4137-aec1-d2450a84bfa1)
+    ![image](https://github.com/Young-Innovative-Thinkers/NPOConnect/assets/75488878/e19b6e59-31ea-4330-ab11-3938a9f6fd6f)
+12. Om alle branches netjes en overzichtelijk te houden schrijven we branches als volgt: add-favorites-page
+13. Commits kunnen het beste geschreven worden als volgt: Add feed stories.
+14. Om het voor jezelf makkelijk te maken is het aan te raden om veel kleine commits te maken. Als je later iets kapot hebt gemaakt wat eerst wel werkte, dan kan je deze code makkelijk terugvinden in je commits.
+
+
 
 Code style:
 1. Eslint is toegevoegd aan het project om ervoor te zorgen dat de code style gelijk is. Als je dubbele quotes gebruikt moet er een error komen. Dit wordt automatisch opgelost als je de code opslaat.
