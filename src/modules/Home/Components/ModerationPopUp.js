@@ -1,7 +1,7 @@
-import { config } from '@gluestack-ui/config';
 import { Button, ButtonText, GluestackUIProvider, Modal, ModalBody, ModalContent, Text, VStack } from '@gluestack-ui/themed';
-import ModerationInput from './ModerationInput';
+import { config } from '@gluestack-ui/config';
 import ButtonGroup from './ButtonGroup';
+import ModerationInput from './ModerationInput';
 
 export default function ModerationPopUp() {
     return (
