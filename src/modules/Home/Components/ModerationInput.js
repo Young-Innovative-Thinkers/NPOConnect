@@ -2,10 +2,10 @@ import { Select, SelectItem, SelectTrigger, SelectInput, SelectPortal, SelectBac
 
 export default function ModerationInput() {
     return (
-        <Select sx={{ borderRadius: '50%'}} defaultValue="fakeNews">
+        <Select sx={{ borderRadius: '50%'}} defaultValue="Nepnieuws">
             <SelectTrigger variant="outline" size="md" sx={{ borderRadius: '50%', width: 170, bgColor: '#E4E4E4', borderColor: '#E4E4E4'}}>
                 <SelectInput sx={{ fontWeight: '$bold'}} />
-                
+
                 <SelectIcon mr="$3">
                     <Icon as={ChevronDownIcon} />
                 </SelectIcon>
