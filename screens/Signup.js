@@ -197,25 +197,15 @@ const Signup = ({ navigation }) => {
             }}>
                 {
                     isPasswordShown == true ? (
-                        <Ionicons name="eye-off" size={24} color={COLORS.grey}/>
-                    ) : (
                         <Ionicons name="eye" size={24} color={COLORS.grey}/>
+                    ) : (
+                        <Ionicons name="eye-off" size={24} color={COLORS.grey}/>
                     ) 
                 }
 
             </TouchableOpacity>
           </View>
         </View>
-
-        {/* Register button */}
-        <Button
-          title="Register"
-          filled
-          style={{
-            marginTop: 18,
-            marginBottom: 4
-          }}
-        />
 
         {/* Section for "Already have an account?" */}
         <View
@@ -235,8 +225,8 @@ const Signup = ({ navigation }) => {
               style={{
                 fontSize: 16,
                 fontStyle: "italic",
-                color: COLORS.primary,
-                fontWeight: "bold",
+                color: COLORS.lightBlue,
+                fontWeight: "700",
                 marginLeft: 6
               }}
             >
@@ -244,6 +234,16 @@ const Signup = ({ navigation }) => {
             </Text>
           </Pressable>
         </View>
+
+        {/* Register button */}
+        <Button
+          title="Register"
+          filled
+          style={{
+            marginTop: 18,
+            marginBottom: 4
+          }}
+        />
       </View>
     </SafeAreaView>
   );
