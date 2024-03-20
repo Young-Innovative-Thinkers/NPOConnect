@@ -11,6 +11,22 @@ const dummyUser = {
 };
 
 export default function Account() {
+
+    const handleEdit = () => {
+        // Functie om bewerking uit te voeren
+        console.log('Edit');
+    }
+
+    const handleLogout = () => {
+        // Functie om uit te loggen
+        console.log('Logout');
+    }
+
+    const handleDeleteAccount = () => {
+        // Functie om account te verwijderen
+        console.log('Delete Account');
+    }
+
     return (
         <GluestackUIProvider config={config}>
             <View style={{ padding: 20 }}>
@@ -59,6 +75,7 @@ export default function Account() {
                         action="positive"
                         isDisabled={false}
                         isFocusVisible={false}
+                        onPress={() => console.log('Edit')}
                     >
                     <ButtonText>Edit</ButtonText>
                     </Button>
@@ -80,6 +97,7 @@ export default function Account() {
                         action="negative"
                         isDisabled={false}
                         isFocusVisible={false}
+                        onPress={() => console.log('Delete Account')}
                     >
                     <ButtonText>Delete Account</ButtonText>
                     </Button>
