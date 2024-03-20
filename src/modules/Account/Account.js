@@ -75,7 +75,7 @@ export default function Account() {
                         action="positive"
                         isDisabled={false}
                         isFocusVisible={false}
-                        onPress={() => console.log('Edit')}
+                        onPress={handleEdit}
                     >
                     <ButtonText>Edit</ButtonText>
                     </Button>
@@ -86,7 +86,7 @@ export default function Account() {
                         action='primary'
                         isDisabled={false}
                         isFocusVisible={false}
-                        onPress={() => console.log('Logout')}
+                        onPress={handleLogout}
                     >
                         <ButtonText>Logout</ButtonText>
                     </Button>
@@ -97,7 +97,7 @@ export default function Account() {
                         action="negative"
                         isDisabled={false}
                         isFocusVisible={false}
-                        onPress={() => console.log('Delete Account')}
+                        onPress={handleDeleteAccount}
                     >
                     <ButtonText>Delete Account</ButtonText>
                     </Button>
