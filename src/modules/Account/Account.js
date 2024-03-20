@@ -1,22 +1,89 @@
 import React from 'react';
 import { View } from 'react-native';
+import { GluestackUIProvider, Text, Button, Input, InputField, ButtonText } from '@gluestack-ui/themed';
 import { config } from '@gluestack-ui/config';
-import { GluestackUIProvider, Text } from '@gluestack-ui/themed';
+
 
 const dummyUser = {
     username: 'dummyUser',
     email: 'dummy@example.com',
     password: 'Wachtwoord'
-  };
+};
 
-  export default function Account() {
+export default function Account() {
     return (
         <GluestackUIProvider config={config}>
             <View style={{ padding: 20 }}>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10 }}>Account Screen</Text>
-                <Text style={{ marginBottom: 5 }}>Gebruikersnaam: {dummyUser.username}</Text>
-                <Text style={{ marginBottom: 5 }}>Wachtwoord: {dummyUser.password}</Text>
-                <Text>E-mail: {dummyUser.email}</Text>
+                <Text variant="heading" style={{ marginBottom: 20, textAlign: 'center' }}>Welcome {dummyUser.username}</Text>
+                <View style={{ marginBottom: 10 }}>
+                    <Text variant="label">Username:</Text>
+                    <Input
+                        variant="outline"
+                        size="md"
+                        isDisabled={false}
+                        isInvalid={false}
+                        isReadOnly={false}
+                    >
+                    <InputField placeholder={dummyUser.username} />
+                    </Input>
+                </View>
+
+                <View style={{ marginBottom: 10 }}>
+                    <Text variant="label">Password:</Text>
+                    <Input
+                        variant="outline"
+                        size="md"
+                        isDisabled={false}
+                        isInvalid={false}
+                        isReadOnly={false}
+                    >
+                    <InputField placeholder={dummyUser.password} />
+                    </Input>
+                </View>
+                <View style={{ marginBottom: 10 }}>
+                    <Text variant="label">E-mail:</Text>
+                    <Input
+                        variant="outline"
+                        size="md"
+                        isDisabled={false}
+                        isInvalid={false}
+                        isReadOnly={false}
+                    >
+                    <InputField placeholder={dummyUser.email} />
+                    </Input>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
+                    <Button
+                        size="md"
+                        variant="solid"
+                        action="positive"
+                        isDisabled={false}
+                        isFocusVisible={false}
+                    >
+                    <ButtonText>Edit</ButtonText>
+                    </Button>
+
+                    <Button
+                        size='md'
+                        variant='solid'
+                        action='primary'
+                        isDisabled={false}
+                        isFocusVisible={false}
+                        onPress={() => console.log('Logout')}
+                    >
+                        <ButtonText>Logout</ButtonText>
+                    </Button>
+
+                    <Button
+                        size="md"
+                        variant="solid"
+                        action="negative"
+                        isDisabled={false}
+                        isFocusVisible={false}
+                    >
+                    <ButtonText>Delete Account</ButtonText>
+                    </Button>
+                </View>
             </View>
         </GluestackUIProvider>
     );
