@@ -1,9 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Alert } from 'react-native';
 import { GluestackUIProvider, Text, Button, Input, InputField, ButtonText } from '@gluestack-ui/themed';
 import { config } from '@gluestack-ui/config';
 
-
+// Dummy data tot we een database hebben
 const dummyUser = {
     username: 'dummyUser',
     email: 'dummy@example.com',
@@ -13,18 +13,37 @@ const dummyUser = {
 export default function Account() {
 
     const handleEdit = () => {
-        // Functie om bewerking uit te voeren
+        // Functie om de Edit uit te voeren
+        // Logica hieronder
         console.log('Edit');
     }
 
     const handleLogout = () => {
-        // Functie om uit te loggen
+        // Functie om de user uit te loggen
+        // Logica hieronder
         console.log('Logout');
     }
 
     const handleDeleteAccount = () => {
-        // Functie om account te verwijderen
-        console.log('Delete Account');
+        // Code voor het verwijderen van het account
+        Alert.alert(
+            'Delete Account',
+            'Are you sure you want to delete your account?',
+            [
+                {
+                    text: 'Cancel',
+                    style: 'cancel'
+                },
+                {
+                    text: 'Delete',
+                    onPress: () => {
+                        // Logica toe om het account te verwijderen
+                        console.log('Delete Account');
+                    },
+                    style: 'destructive'
+                }
+            ]
+        );
     }
 
     return (
