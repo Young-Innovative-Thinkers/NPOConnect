@@ -13,7 +13,7 @@ const Welcome = ({ navigation }) => {
       }}
       colors={[COLORS.secondary, COLORS.primary]}
     >
-        {/* container  for the content of the welcome screen */}
+      {/* container  for the content of the welcome screen */}
       <View style={{ flex: 1 }}>
         <View>
           <Image
@@ -27,7 +27,7 @@ const Welcome = ({ navigation }) => {
           />
         </View>
 
-         {/* text content */}
+        {/* text content */}
         <View
           style={{
             paddingHorizontal: 22,
@@ -60,7 +60,7 @@ const Welcome = ({ navigation }) => {
           </Text>
         </View>
 
-         {/* button content */}
+        {/* button content */}
         <View style={{ alignItems: "center" }}>
           <Button
             title="Register"
@@ -71,8 +71,8 @@ const Welcome = ({ navigation }) => {
             }}
           />
         </View>
-        
-         {/* small login text content */}
+
+        {/* small login text content */}
         <View
           style={{
             flexDirection: "row",

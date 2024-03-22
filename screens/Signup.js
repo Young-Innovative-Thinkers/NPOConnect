@@ -1,29 +1,33 @@
 import {
-  View, Text, Pressable, TextInput, TouchableOpacity } from "react-native";
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import COLORS from "../constants/colors";
 import { Ionicons } from "@expo/vector-icons";
 import Button from "../components/Button";
 
-
 const Signup = ({ navigation }) => {
-    // State to manage whether the password is shown or hidden
-    const [isPasswordShown, setIsPasswordShown] = useState(false);
+  // State to manage whether the password is shown or hidden
+  const [isPasswordShown, setIsPasswordShown] = useState(false);
   return (
-    // Wrapper 
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}> 
-        {/* Main container */}
+    // Wrapper
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+      {/* Main container */}
       <View style={{ flex: 1, marginHorizontal: 22 }}>
-         {/* Title */}
+        {/* Title */}
         <View style={{ marginVertical: 22 }}>
           <Text
             style={{
-              fontSize: 30,
+              fontSize: 50,
               textAlign: "center",
               fontWeight: "900",
               marginVertical: 12,
-              color: COLORS.orange
+              color: COLORS.orange,
             }}
           >
             Sign Up
@@ -41,14 +45,14 @@ const Signup = ({ navigation }) => {
               borderRadius: 8,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 22
+              paddingLeft: 22,
             }}
           >
             <TextInput
               placeholder="First name"
               placeholderTextColor={COLORS.grey}
               style={{
-                width: "100%"
+                width: "100%",
               }}
             />
           </View>
@@ -65,14 +69,14 @@ const Signup = ({ navigation }) => {
               borderRadius: 8,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 22
+              paddingLeft: 22,
             }}
           >
             <TextInput
               placeholder="Last name"
               placeholderTextColor={COLORS.grey}
               style={{
-                width: "100%"
+                width: "100%",
               }}
             />
           </View>
@@ -89,14 +93,14 @@ const Signup = ({ navigation }) => {
               borderRadius: 8,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 22
+              paddingLeft: 22,
             }}
           >
             <TextInput
               placeholder="Username"
               placeholderTextColor={COLORS.grey}
               style={{
-                width: "100%"
+                width: "100%",
               }}
             />
           </View>
@@ -113,7 +117,7 @@ const Signup = ({ navigation }) => {
               borderRadius: 8,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 22
+              paddingLeft: 22,
             }}
           >
             <TextInput
@@ -121,7 +125,7 @@ const Signup = ({ navigation }) => {
               placeholderTextColor={COLORS.grey}
               keyboardType="email-address"
               style={{
-                width: "100%"
+                width: "100%",
               }}
             />
           </View>
@@ -139,7 +143,7 @@ const Signup = ({ navigation }) => {
               alignItems: "center",
               flexDirection: "row",
               justifyContent: "space-between",
-              paddingLeft: 22
+              paddingLeft: 22,
             }}
           >
             <TextInput
@@ -150,7 +154,7 @@ const Signup = ({ navigation }) => {
                 width: "12%",
                 borderRightWidth: 1,
                 borderLeftColor: COLORS.grey,
-                height: "100%"
+                height: "100%",
               }}
             />
 
@@ -159,7 +163,7 @@ const Signup = ({ navigation }) => {
               placeholderTextColor={COLORS.grey}
               keyboardType="numeric"
               style={{
-                width: "80%"
+                width: "80%",
               }}
             />
           </View>
@@ -176,7 +180,7 @@ const Signup = ({ navigation }) => {
               borderRadius: 8,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 22
+              paddingLeft: 22,
             }}
           >
             <TextInput
@@ -184,25 +188,23 @@ const Signup = ({ navigation }) => {
               placeholderTextColor={COLORS.grey}
               secureTextEntry={isPasswordShown}
               style={{
-                width: "100%"
+                width: "100%",
               }}
             />
 
-             {/* Toggle btn fot password visibility */}
+            {/* Toggle btn fot password visibility */}
             <TouchableOpacity
-            onPress={() => setIsPasswordShown(!isPasswordShown)}
-            style={{
-                position: 'absolute',
-                right: 12
-            }}>
-                {
-                    isPasswordShown == true ? (
-                        <Ionicons name="eye" size={24} color={COLORS.grey}/>
-                    ) : (
-                        <Ionicons name="eye-off" size={24} color={COLORS.grey}/>
-                    ) 
-                }
-
+              onPress={() => setIsPasswordShown(!isPasswordShown)}
+              style={{
+                position: "absolute",
+                right: 12,
+              }}
+            >
+              {isPasswordShown == true ? (
+                <Ionicons name="eye-off" size={24} color={COLORS.grey} />
+              ) : (
+                <Ionicons name="eye" size={24} color={COLORS.grey} />
+              )}
             </TouchableOpacity>
           </View>
         </View>
@@ -213,11 +215,13 @@ const Signup = ({ navigation }) => {
             flexDirection: "row",
             justifyContent: "center",
             textAlign: "center",
-            marginVertical: 20
+            marginVertical: 20,
           }}
         >
-            {/* Text and link to login screen */}
-          <Text style={{ fontSize: 16, fontStyle: "italic", color: COLORS.black }}>
+          {/* Text and link to login screen */}
+          <Text
+            style={{ fontSize: 16, fontStyle: "italic", color: COLORS.black }}
+          >
             Already have an account
           </Text>
           <Pressable onPress={() => navigation.navigate("Login")}>
@@ -227,7 +231,7 @@ const Signup = ({ navigation }) => {
                 fontStyle: "italic",
                 color: COLORS.lightBlue,
                 fontWeight: "700",
-                marginLeft: 6
+                marginLeft: 6,
               }}
             >
               Login
@@ -241,7 +245,7 @@ const Signup = ({ navigation }) => {
           filled
           style={{
             marginTop: 18,
-            marginBottom: 4
+            marginBottom: 4,
           }}
         />
       </View>
