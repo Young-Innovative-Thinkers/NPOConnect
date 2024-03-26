@@ -192,6 +192,7 @@ export default function Account() {
                 width: 0,
                 height: 10,
               },
+              shadowOpacity: 0.2,
               justifyContent: "center",
               alignItems: "center",
             }}
