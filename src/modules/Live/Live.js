@@ -1,7 +1,7 @@
 import { View, Text , StyleSheet, Image} from 'react-native';
 import React from 'react';
 import { TextInput } from 'react-native-paper';
-
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 
 
 export default function Live() {
@@ -54,15 +54,22 @@ export default function Live() {
             
             
         </View>
-
-
-        <View style={styles.chats}>
-           
-
-            <TextInput style={styles.chat}>
+        
+        {/* <KeyboardAwareScrollView>
+            <TextInput style={styles.chat} placeholder='Stuur een chat bericht' >
                 <Text style={styles.text}>Stuur een chat bericht</Text>
                 
             </TextInput>
+        
+        </KeyboardAwareScrollView> */}
+
+        <View style={styles.chats}>
+           
+            <TextInput style={styles.chat} placeholder='Stuur een chat bericht' >
+                <Text style={styles.text}>Stuur een chat bericht</Text>
+                
+            </TextInput>
+            
         </View></>
     );
 
@@ -172,7 +179,8 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         
         flex: 1,
-        justifyContent: 'flex-end'        
+        justifyContent: 'flex-end',
+        color: '#C8CED6'        
     },
     
     chat: {
@@ -189,12 +197,15 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.8,
         shadowRadius: 3,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        zIndex: 4,
+        color: '#C8CED6'
     },
 
     text: {
         marginLeft: 10,
-        marginTop: 20
+        marginTop: 20,
+        color: '#C8CED6'
     },
 
     bold: {
