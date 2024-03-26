@@ -164,8 +164,21 @@ export default function Account() {
                 height: 10,
               },
               shadowOpacity: 0.2,
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
+            <Image
+              source={require("../../../assets/VideoNieuws.png")}
+              style={{
+                width: 180,
+                height: 120,
+                borderRadius: 10,
+                alignSelf: "center",
+                marginTop: 10,
+                marginBottom: 10,
+              }}
+            />
           </View>
           <View
             style={{
@@ -179,9 +192,53 @@ export default function Account() {
                 width: 0,
                 height: 10,
               },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("../../../assets/NieuwsImage.png")}
+              style={{
+                width: 180,
+                height: 120,
+                borderRadius: 10,
+                alignSelf: "center",
+                marginTop: 10,
+                marginBottom: 10,
+              }}
+            />
+          </View>
+        </View>
+
+        <View style={{ justifyContent: "center", padding: 30, marginTop: -40 }}>
+          <View
+            style={{
+              width: 370,
+              height: 70,
+              backgroundColor: "white",
+              borderRadius: 10,
+              padding: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 10,
+              },
               shadowOpacity: 0.2,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
+            <Image
+              source={require("../../../assets/NosPost1.png")}
+              style={{
+                width: 370,
+                height: 35,
+                alignSelf: "center",
+                marginTop: 10,
+                marginBottom: 10,
+              }}
+            />
           </View>
         </View>
 
@@ -198,12 +255,22 @@ export default function Account() {
                 width: 0,
                 height: 10,
               },
-              shadowOpacity: 0.2, flexDirection: "row",
+              shadowOpacity: 0.2,
+              flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <FontAwesome name="text-width" size={30} color="gray" />
+            <Image
+              source={require("../../../assets/NosPost2.png")}
+              style={{
+                width: 370,
+                height: 35,
+                alignSelf: "center",
+                marginTop: 10,
+                marginBottom: 10,
+              }}
+            />
           </View>
         </View>
 
@@ -220,34 +287,22 @@ export default function Account() {
                 width: 0,
                 height: 10,
               },
-              shadowOpacity: 0.2, flexDirection: "row",
+              shadowOpacity: 0.2,
+              flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <FontAwesome name="text-width" size={30} color="gray" />
-          </View>
-        </View>
-
-        <View style={{ justifyContent: "center", padding: 30, marginTop: -40 }}>
-          <View
-            style={{
-              width: 370,
-              height: 70,
-              backgroundColor: "white",
-              borderRadius: 10,
-              padding: 20,
-              shadowColor: "#000",
-              shadowOffset: {
-                width: 0,
-                height: 10,
-              },
-              shadowOpacity: 0.2, flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <FontAwesome name="text-width" size={30} color="gray" />
+            <Image
+              source={require("../../../assets/NosPost3.png")}
+              style={{
+                width: 370,
+                height: 45,
+                alignSelf: "center",
+                marginTop: 10,
+                marginBottom: 10,
+              }}
+            />
           </View>
         </View>
       </ScrollView>
