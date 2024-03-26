@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
-import { Avatar, Button, Card, Divider, Text, Modal, Portal, PaperProvider, } from 'react-native-paper';
+import { Avatar, Button, Card, Divider, Text, Modal, Portal, PaperProvider, Icon} from 'react-native-paper';
 
 export default function Home() {
-  const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
+  const LeftContent = props => <Avatar.Image {...props} source={require('./stories/avatar.jpg')} />
   const [visible, setVisible] = React.useState(false);
 
   const showModal = () => setVisible(true);
@@ -19,19 +19,24 @@ export default function Home() {
         <PaperProvider>
  
  <ScrollView horizontal={true}>
-      <Avatar.Icon  style = {styles.stories}  color= 'orange' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'blue' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'red' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'green' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'purple' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'green' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'orange' size={50} icon="account"/>
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story1.jpg')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story2.jpg')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story3.png')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story4.png')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story1.jpg')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story2.jpg')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story3.png')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story4.png')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story1.jpg')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story2.jpg')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story3.png')} />
+      <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story4.png')} />
 </ScrollView>
         <ScrollView>
         <Portal>
         <Modal visible={visible} onDismiss={hideModal} contentContainerStyle={containerStyle}>
-        <Card style={{paddingBottom: 10}}>
-        <Card.Title title="Boom omgevallen" subtitle="Recht op mijn auto" left={LeftContent} />
+        <Card>
+        <Card.Title title="connectXplorer" subtitle="Boom op mijn auto" left={LeftContent} />
         <Card.Content>
           <Text variant="bodyMedium">Kom uit mijn huis ligt er ineens een boom op mijn auto. Het heeft gisteren hard gestormd
           en daardoor is er een boom op mijn auto gevallen. Ik zal als ik jullie was even checken bij jullie auto en voorzichtig rijden</Text>
@@ -45,56 +50,91 @@ export default function Home() {
         <Text>Upload post here</Text>
         </Modal>
       </Portal>
-        <Card>
-        <Card.Title title="Boom omgevallen" subtitle="Recht op mijn auto" left={LeftContent} />
-        <Card.Content>
-          <Text variant="bodyMedium">Kom uit mijn huis ligt er ineens een boom op mijn auto</Text>
+      <Card style={{marginBottom: 10}}>
+        <Card.Title title="Jimmy_n" subtitle="The Erasmus bridge was closed until afternoon.." left={LeftContent} />
+        <Card.Cover style={{padding: 15}} source={require('./stories/erasmus.jpg')} />
+        <Card.Content style={{flexDirection: 'row' }}>
+        <Icon
+    source="star"
+    color={'yellow'}
+    size={40}
+  />
+  <Icon
+    source="forum-outline"
+    color={'grey'}
+    size={40}
+  />
+          <Text style={{alignSelf: 'center', left: 170}} variant="bodyMedium">    <Icon
+    source="map-marker"
+    color={'red'}
+    size={25}
+  />Rotterdam</Text>
         </Card.Content>
-        <Card.Cover source={{ uri: 'https://picsum.photos/750' }} />
-        <Card.Actions>
-    
-      <Button textColor='white' buttonColor='darkorange' style={{marginTop: 30}} onPress={showModal}>
-        Read
-      </Button>
-        </Card.Actions>
       </Card>
       <Divider />
-      <Card>
-        <Card.Title title="Bom in grasveld gevonden" subtitle="Bij de Prinsstraat" left={LeftContent} />
-        <Card.Content>
-          <Text variant="bodyMedium">Ik hoor net van mijn buurman dat er een bom is gevonden bij een grasveld in mijn straat</Text>
+      <Card style={{marginBottom: 10}}>
+        <Card.Title title="ConnectXplorer" subtitle="Policemen arresting a man that was causing... " left={props => <Avatar.Image {...props} source={require('./stories/avatar2.webp')} />} />
+        <Card.Cover style={{padding: 15}} source={require('./stories/politie.jpg')} />
+        <Card.Content style={{flexDirection: 'row' }}>
+        <Icon
+    source="star"
+    color={'yellow'}
+    size={40}
+  />
+  <Icon
+    source="forum-outline"
+    color={'grey'}
+    size={40}
+  />
+          <Text style={{alignSelf: 'center', left: 170}} variant="bodyMedium">    <Icon
+    source="map-marker"
+    color={'red'}
+    size={25}
+  />The Hague</Text>
         </Card.Content>
-        <Card.Cover source={{ uri: 'https://picsum.photos/799' }} />
-        <Card.Actions>
-      <Button textColor='white' buttonColor='darkorange' style={{marginTop: 30}} onPress={showModal}>
-        Read
-      </Button>
-        </Card.Actions>
       </Card>
       <Divider />
-      <Card>
-        <Card.Title title="Fiets gestolen" subtitle="Op klaar lichte dag" left={LeftContent} />
-        <Card.Content>
-          <Text variant="bodyMedium">Iemand heeft op klaarlichte dag mijn fiets gestolen die voor mijn deur stond</Text>
+      <Card style={{marginBottom: 10}}>
+        <Card.Title title="Jimmy_n" subtitle="The Erasmus bridge was closed until afternoon.." left={LeftContent} />
+        <Card.Cover style={{padding: 15}} source={require('./stories/erasmus.jpg')} />
+        <Card.Content style={{flexDirection: 'row' }}>
+        <Icon
+    source="star"
+    color={'yellow'}
+    size={40}
+  />
+  <Icon
+    source="forum-outline"
+    color={'grey'}
+    size={40}
+  />
+          <Text style={{alignSelf: 'center', left: 170}} variant="bodyMedium">    <Icon
+    source="map-marker"
+    color={'red'}
+    size={25}
+  />Rotterdam</Text>
         </Card.Content>
-        <Card.Cover source={{ uri: 'https://picsum.photos/730' }} />
-        <Card.Actions>
-      <Button textColor='white' buttonColor='darkorange' style={{marginTop: 30}} onPress={showModal}>
-        Read
-      </Button>
-        </Card.Actions>
       </Card>
-      <Card>
-        <Card.Title title="Bom in grasveld gevonden" subtitle="Bij de Prinsstraat" left={LeftContent} />
-        <Card.Content>
-          <Text variant="bodyMedium">Ik hoor net van mijn buurman dat er een bom is gevonden bij een grasveld in mijn straat</Text>
+      <Card style={{marginBottom: 10}}>
+        <Card.Title title="ConnectXplorer" subtitle="Policemen arresting a man that was causing... " left={props => <Avatar.Image {...props} source={require('./stories/avatar2.webp')} />} />
+        <Card.Cover style={{padding: 15}} source={require('./stories/politie.jpg')} />
+        <Card.Content style={{flexDirection: 'row' }}>
+        <Icon
+    source="star"
+    color={'yellow'}
+    size={40}
+  />
+  <Icon
+    source="forum-outline"
+    color={'grey'}
+    size={40}
+  />
+          <Text style={{alignSelf: 'center', left: 170}} variant="bodyMedium">    <Icon
+    source="map-marker"
+    color={'red'}
+    size={25}
+  />The Hague</Text>
         </Card.Content>
-        <Card.Cover source={{ uri: 'https://picsum.photos/799' }} />
-        <Card.Actions>
-      <Button textColor='white' buttonColor='darkorange' style={{marginTop: 30}} onPress={showModal}>
-        Read
-      </Button>
-        </Card.Actions>
       </Card>
       </ScrollView>
       </PaperProvider>  
@@ -103,6 +143,6 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   stories: {
-    margin: 10
+    margin: 10,
   },
 })
