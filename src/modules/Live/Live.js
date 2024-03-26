@@ -1,38 +1,56 @@
 import { View, Text , StyleSheet, Image} from 'react-native';
 import React from 'react';
 import { TextInput } from 'react-native-paper';
-import { withTheme } from 'react-native-paper';
+
+
 
 export default function Live() {
     return (
         <><View style={styles.stream}>
-            <Text style={styles.live}>Live: Newspresenter</Text>
+            <View style={styles.profile}>
+                <Image source={require('./img/pf1.png')} style={styles.profilep} />
+                <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
+                    <Text style={styles.pfT}>CityLover</Text>
+                    <Text style={styles.pfL}>Live</Text>                            
+                </View>
+
+            </View>
+
+            
 
             <View style={styles.messages}>
                 <View style={styles.message}>
-                    <Text style={styles.messagemakeup}>
-                        <Text style={styles.bold}>NieuwsGierig: </Text>
-                        <Text>Wat een verschrikkelijk ongeluk!</Text>
-                    </Text>
+                    <Image source={require('./img/pf1.png')} style={styles.pf} />
+                    <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
+                        <Text style={styles.bold}>ConnectXplorer</Text>
+                        <Text style={styles.normal}>Ik hoop dat iedereen in orde is!</Text>                            
+                    </View>
                 </View>
                 <View style={styles.message}>
-                    <Text style={styles.messagemakeup}>
-                        <Text style={styles.bold}>GretaNieuwsberg: </Text>
-                        <Text>Jeetje, wat erg zeg...</Text>
-                    </Text>
+                    <Image source={require('./img/pf2.png')} style={styles.pf} />
+                    <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
+                        <Text style={styles.bold}>Jimmy_N</Text>
+                        <Text style={styles.normal}>Kan iemand vertellen wat er aan de hand is?</Text>                            
+                    </View>
                 </View>
                 <View style={styles.message}>
-                    <Text style={styles.messagemakeup}>
-                        <Text style={styles.bold}>Larsvandebuurt: </Text>
-                        <Text>Ik hoop dat iedereen in orde is!</Text>
-                    </Text>    
+                    <Image source={require('./img/pf3.png')} style={styles.pf} />
+                    <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
+                        <Text style={styles.bold}>Tj_2503</Text>
+                        <Text style={styles.normal}>WEG MET DE POLITIE!!!</Text>                            
+                    </View>
                 </View>
-            </View>
+                <View style={styles.message}>
+                    <Image source={require('./img/pf4.png')} style={styles.pf} />
+                    <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
+                        <Text style={styles.bold}>Mr_Bot</Text>
+                        <Text style={styles.normal}>Waar gaat dit land naartoe?!</Text>                            
+                    </View>
+                </View>
+            </View>            
 
-            <View style={styles.circle}></View>
-
-            <Image source={require('./img/auto.jpg')} style={styles.img} />
-
+            <Image source={require('./img/popo.jpg')} style={styles.img} />
+            {/* <Image src={auto} style={styles.img}/> */}
             
             
         </View>
@@ -55,7 +73,7 @@ export default function Live() {
 const styles = StyleSheet.create({
     stream: {
         widht: '100%',
-        height: '90%',
+        height: '92%',
         marginTop: 5,
         marginLeft: 10,
         marginRight: 10,
@@ -68,7 +86,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.8,
         shadowRadius: 3,
 
-        
     },
 
     circle: {
@@ -90,6 +107,45 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
     },
 
+    profile: {
+        width: 120,
+        height: 60,
+        marginLeft: 280,
+        marginTop: 423,
+        paddingLeft: 5,
+        zIndex: 2,
+        backgroundColor: '#ffffff',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 5,
+        shadowColor: '#ggg',
+        shadowOffset: {
+            width: 2,
+            height: 2
+        },
+        shadowOpacity: 0.4,
+        shadowRadius: 3,
+    },
+
+    profilep: {
+        height: 40,
+        width: 40,
+        marginRight: 3
+    },
+
+    pfT: {
+        fontSize: 15,
+        fontWeight: '300',
+    },
+
+    pfL: {
+        fontSize: 9,
+        fontStyle: 'italic',
+        color: 'red'
+    },
+
+
     live: {
         fontSize: 20,
         marginTop: 20,
@@ -101,7 +157,7 @@ const styles = StyleSheet.create({
     },
     img: {
         width: '100%',
-        height: '100%',
+        height: '70%',
         marginTop: 5,
         zIndex: 1,
         position: 'absolute',
@@ -110,10 +166,10 @@ const styles = StyleSheet.create({
 
 
     chats: {
-        marginTop: 10,
+        marginTop: 0,
         marginLeft: 10,
         marginRight: 10,
-        marginBottom: 10,
+        marginBottom: 5,
         
         flex: 1,
         justifyContent: 'flex-end'        
@@ -133,6 +189,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.8,
         shadowRadius: 3,
+        backgroundColor: '#ffffff'
     },
 
     text: {
@@ -141,36 +198,51 @@ const styles = StyleSheet.create({
     },
 
     bold: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#006EFF',
+        fontSize: 10,
+        fontStyle: 'italic'
+    },
+
+    normal: {
+        color: '#000000',
+        fontSize: 11,
+        fontWeight: '500'
     },
 
     message: {
-        height: 30,
-        paddingLeft: 10,
-        borderRadius: 5,
-        backgroundColor: '#3d3d3d77',
-        borderWidth: 1,
-        borderColor: '#525252',
-        zIndex: 2,
-        justifyContent: 'center'
+        height: 50,
+        paddingLeft: 35,
+        backgroundColor: '#ffffff',
+        zIndex: 1,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
     },
 
     messages: {
-        width: '90%',
-        marginLeft: 10,
-        zIndex: 2,
+        width: '100%',
+        // marginLeft: 10,
+        zIndex: 1,
         flex: 1,
         justifyContent: 'flex-end',
-        shadowColor: '#000',
+        shadowColor: '#B9BABE',
         shadowOffset: {
-            width: 2,
-            height: 2
+            width: 1,
+            height: 1
         },
-        shadowOpacity: 0.8,
-        shadowRadius: 3,
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
     },
 
     messagemakeup: {
-        color: '#ffffff'
+        color: '#000000'
+    },
+
+    pf: {
+        height: 40,
+        width: 40,
+        marginRight: 7
+        
     }
 });
