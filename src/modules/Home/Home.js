@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
-import { Avatar, Button, Card, Divider, Text, Modal, Portal, PaperProvider, IconButton, MD3Colors, } from 'react-native-paper';
+import { Avatar, Button, Card, Divider, Text, Modal, Portal, PaperProvider, } from 'react-native-paper';
 
 export default function Home() {
   const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
@@ -18,11 +18,19 @@ export default function Home() {
     return(
         <PaperProvider>
  
-              
+ <ScrollView horizontal={true}>
+      <Avatar.Icon  style = {styles.stories}  color= 'orange' size={50} icon="account"/>
+      <Avatar.Icon  style = {styles.stories} color= 'blue' size={50} icon="account"/>
+      <Avatar.Icon  style = {styles.stories} color= 'red' size={50} icon="account"/>
+      <Avatar.Icon  style = {styles.stories} color= 'green' size={50} icon="account"/>
+      <Avatar.Icon  style = {styles.stories} color= 'purple' size={50} icon="account"/>
+      <Avatar.Icon  style = {styles.stories} color= 'green' size={50} icon="account"/>
+      <Avatar.Icon  style = {styles.stories} color= 'orange' size={50} icon="account"/>
+</ScrollView>
         <ScrollView>
         <Portal>
         <Modal visible={visible} onDismiss={hideModal} contentContainerStyle={containerStyle}>
-        <Card>
+        <Card style={{paddingBottom: 10}}>
         <Card.Title title="Boom omgevallen" subtitle="Recht op mijn auto" left={LeftContent} />
         <Card.Content>
           <Text variant="bodyMedium">Kom uit mijn huis ligt er ineens een boom op mijn auto. Het heeft gisteren hard gestormd
@@ -89,27 +97,7 @@ export default function Home() {
         </Card.Actions>
       </Card>
       </ScrollView>
-      <Portal>
-      <IconButton
-    icon="upload"
-    iconColor={MD3Colors.error50}
-    size={30}
-    style={{alignSelf: 'flex-end' }}
-    onPress={() => showUpload()}
-    mode='contained-tonal'
-  />
-  </Portal>
-  <ScrollView horizontal={true}>
-      <Avatar.Icon  style = {styles.stories}  color= 'orange' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'blue' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'red' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'green' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'purple' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'green' size={50} icon="account"/>
-      <Avatar.Icon  style = {styles.stories} color= 'orange' size={50} icon="account"/>
-</ScrollView>
-      </PaperProvider>
-      
+      </PaperProvider>  
     );
 }
 
