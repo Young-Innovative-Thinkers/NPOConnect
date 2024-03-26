@@ -1,127 +1,256 @@
-import React from 'react';
-import { View, Alert } from 'react-native';
-import { GluestackUIProvider, Text, Button, Input, InputField, ButtonText } from '@gluestack-ui/themed';
-import { config } from '@gluestack-ui/config';
+import React from "react";
+import { View, Alert } from "react-native";
+import {
+  GluestackUIProvider,
+  Text,
+  Button,
+  ButtonText,
+  ScrollView,
+} from "@gluestack-ui/themed";
+import { config } from "@gluestack-ui/config";
+import { Image } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 
-// Dummy data tot we een database hebben
 const dummyUser = {
-    username: 'dummyUser',
-    email: 'dummy@example.com',
-    password: 'Wachtwoord'
+  username: "Sara de Jong",
 };
 
 export default function Account() {
+  return (
+    <GluestackUIProvider config={config}>
+      <ScrollView>
+        <View
+          style={{
+            backgroundColor: "white",
+            borderBottomRightRadius: 50,
+            borderBottomLeftRadius: 50,
+            borderTopRightRadius: 90,
+            borderTopLeftRadius: 90,
+            padding: 20,
+            shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 10,
+            },
+            shadowOpacity: 0.2,
+          }}
+        >
+          <View style={{ position: "absolute", top: 30, left: 30 }}>
+            <FontAwesome name="arrow-left" size={24} color="gray" />
+          </View>
 
-    const handleEdit = () => {
-        // Functie om de Edit uit te voeren
-        // Logica hieronder
-        console.log('Edit');
-    }
+          <View style={{ position: "absolute", top: 30, right: 30 }}>
+            <FontAwesome name="cog" size={24} color="gray" />
+          </View>
 
-    const handleLogout = () => {
-        // Functie om de user uit te loggen
-        // Logica hieronder
-        console.log('Logout');
-    }
+          <Image
+            source={require("../../../assets/UserProfile.png")}
+            style={{
+              width: 100,
+              height: 100,
+              borderRadius: 50,
+              alignSelf: "center",
+              marginTop: 20,
+            }}
+          />
+          <Text
+            variant="heading"
+            style={{
+              fontSize: 20,
+              fontWeight: "bold",
+              marginTop: 10,
+              marginBottom: 5,
+              textAlign: "center",
+            }}
+          >
+            {dummyUser.username}
+          </Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: 20,
+            }}
+          >
+            <Text variant="heading" style={{ marginRight: 10, color: "blue" }}>
+              ConnectXplorer
+            </Text>
+            <FontAwesome name="check" size={20} color="blue" />
+          </View>
 
-    const handleDeleteAccount = () => {
-        // Code voor het verwijderen van het account
-        Alert.alert(
-            'Delete Account',
-            'Are you sure you want to delete your account?',
-            [
-                {
-                    text: 'Cancel',
-                    style: 'cancel'
-                },
-                {
-                    text: 'Delete',
-                    onPress: () => {
-                        // Logica toe om het account te verwijderen
-                        console.log('Delete Account');
-                    },
-                    style: 'destructive'
-                }
-            ]
-        );
-    }
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              marginTop: -5,
+            }}
+          >
+            <Text
+              style={{ marginRight: 70, color: "gray", fontStyle: "italic" }}
+            >
+              Posts
+            </Text>
+            <Text style={{ marginLeft: 0, color: "gray", fontStyle: "italic" }}>
+              Followers
+            </Text>
+          </View>
 
-    return (
-        <GluestackUIProvider config={config}>
-            <View style={{ padding: 20 }}>
-                <Text variant="heading" style={{ marginBottom: 20, textAlign: 'center' }}>Welcome {dummyUser.username}</Text>
-                <View style={{ marginBottom: 10 }}>
-                    <Text variant="label">Username:</Text>
-                    <Input
-                        variant="outline"
-                        size="md"
-                        isDisabled={false}
-                        isInvalid={false}
-                        isReadOnly={false}
-                    >
-                    <InputField placeholder={dummyUser.username} />
-                    </Input>
-                </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: 10,
+            }}
+          >
+            <FontAwesome name="microphone" size={15} color="gray" />
+            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>15</Text>
 
-                <View style={{ marginBottom: 10 }}>
-                    <Text variant="label">Password:</Text>
-                    <Input
-                        variant="outline"
-                        size="md"
-                        isDisabled={false}
-                        isInvalid={false}
-                        isReadOnly={false}
-                    >
-                    <InputField placeholder={dummyUser.password} />
-                    </Input>
-                </View>
-                <View style={{ marginBottom: 10 }}>
-                    <Text variant="label">E-mail:</Text>
-                    <Input
-                        variant="outline"
-                        size="md"
-                        isDisabled={false}
-                        isInvalid={false}
-                        isReadOnly={false}
-                    >
-                    <InputField placeholder={dummyUser.email} />
-                    </Input>
-                </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
-                    <Button
-                        size="md"
-                        variant="solid"
-                        action="positive"
-                        isDisabled={false}
-                        isFocusVisible={false}
-                        onPress={handleEdit}
-                    >
-                    <ButtonText>Edit</ButtonText>
-                    </Button>
+            <View style={{ width: 80 }} />
 
-                    <Button
-                        size='md'
-                        variant='solid'
-                        action='primary'
-                        isDisabled={false}
-                        isFocusVisible={false}
-                        onPress={handleLogout}
-                    >
-                        <ButtonText>Logout</ButtonText>
-                    </Button>
+            <FontAwesome name="users" size={15} color="gray" />
+            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>25</Text>
+          </View>
 
-                    <Button
-                        size="md"
-                        variant="solid"
-                        action="negative"
-                        isDisabled={false}
-                        isFocusVisible={false}
-                        onPress={handleDeleteAccount}
-                    >
-                    <ButtonText>Delete Account</ButtonText>
-                    </Button>
-                </View>
-            </View>
-        </GluestackUIProvider>
-    );
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginTop: 10,
+            }}
+          >
+            <Button
+              size="md"
+              variant="solid"
+              action="positive"
+              isDisabled={false}
+              isFocusVisible={false}
+              style={{ backgroundColor: "#FF6C00", marginLeft: 60 }}
+            >
+              <ButtonText>Edit Profile</ButtonText>
+            </Button>
+
+            <Button
+              size="md"
+              variant="solid"
+              action="primary"
+              isDisabled={false}
+              isFocusVisible={false}
+              style={{ backgroundColor: "#FF6C00", marginRight: 60 }}
+            >
+              <ButtonText>Followers</ButtonText>
+            </Button>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            padding: 30,
+          }}
+        >
+          <View
+            style={{
+              width: 177,
+              height: 113,
+              backgroundColor: "white",
+              borderRadius: 10,
+              padding: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 10,
+              },
+              shadowOpacity: 0.2,
+            }}
+          >
+          </View>
+          <View
+            style={{
+              width: 177,
+              height: 113,
+              backgroundColor: "white",
+              borderRadius: 10,
+              padding: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 10,
+              },
+              shadowOpacity: 0.2,
+            }}
+          >
+          </View>
+        </View>
+
+        <View style={{ justifyContent: "center", padding: 30, marginTop: -40 }}>
+          <View
+            style={{
+              width: 370,
+              height: 70,
+              backgroundColor: "white",
+              borderRadius: 10,
+              padding: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 10,
+              },
+              shadowOpacity: 0.2, flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <FontAwesome name="text-width" size={30} color="gray" />
+          </View>
+        </View>
+
+        <View style={{ justifyContent: "center", padding: 30, marginTop: -40 }}>
+          <View
+            style={{
+              width: 370,
+              height: 70,
+              backgroundColor: "white",
+              borderRadius: 10,
+              padding: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 10,
+              },
+              shadowOpacity: 0.2, flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <FontAwesome name="text-width" size={30} color="gray" />
+          </View>
+        </View>
+
+        <View style={{ justifyContent: "center", padding: 30, marginTop: -40 }}>
+          <View
+            style={{
+              width: 370,
+              height: 70,
+              backgroundColor: "white",
+              borderRadius: 10,
+              padding: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 10,
+              },
+              shadowOpacity: 0.2, flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <FontAwesome name="text-width" size={30} color="gray" />
+          </View>
+        </View>
+      </ScrollView>
+    </GluestackUIProvider>
+  );
 }
