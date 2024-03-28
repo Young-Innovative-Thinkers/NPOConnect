@@ -1,8 +1,8 @@
+import { Avatar, PaperProvider, Searchbar, SegmentedButtons, Text  } from 'react-native-paper';
 import { useState } from 'react';
 import { View, StyleSheet} from 'react-native';
-import { Avatar, PaperProvider, Searchbar, SegmentedButtons, Text  } from 'react-native-paper';
-import AvatarImage from '../Home/stories/avatar.jpg';
 import Avatar2Image from '../Home/stories/avatar2.webp';
+import AvatarImage from '../Home/stories/avatar.jpg';
 
 export default function Search() {
     const [searchQuery, setSearchQuery] = useState('');

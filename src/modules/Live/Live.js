@@ -1,7 +1,6 @@
+import { TextInput } from 'react-native-paper';
 import { View, Text , StyleSheet, Image} from 'react-native';
 import React from 'react';
-import { TextInput } from 'react-native-paper';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 
 
 export default function Live() {

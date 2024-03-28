@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
 import { Avatar, Card, Divider, Text, Modal, Portal, PaperProvider, Icon} from 'react-native-paper';
+import { ScrollView, StyleSheet } from 'react-native';
+import * as React from 'react';
+import Avatar2Image from './stories/avatar2.webp';
+import AvatarImage from './stories/avatar.jpg';
+import ErasmusImage from './stories/erasmus.jpg';
+import PolitieImage from './stories/politie.jpg';
 import Story1 from './stories/story1.jpg';
 import Story2 from './stories/story2.jpg';
 import Story3 from './stories/story3.png';
 import Story4 from './stories/story4.png';
-import AvatarImage from './stories/avatar.jpg';
-import Avatar2Image from './stories/avatar2.webp';
-import ErasmusImage from './stories/erasmus.jpg';
-import PolitieImage from './stories/politie.jpg';
 
 export default function Home() {
     const LeftContent = props => <Avatar.Image {...props} source={AvatarImage} />;
