@@ -1,17 +1,22 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-
-import { Avatar, Button, Card, Divider, Text, Modal, Portal, PaperProvider, Icon} from 'react-native-paper';
+import { Avatar, Card, Divider, Text, Modal, Portal, PaperProvider, Icon} from 'react-native-paper';
+import Story1 from './stories/story1.jpg';
+import Story2 from './stories/story2.jpg';
+import Story3 from './stories/story3.png';
+import Story4 from './stories/story4.png';
+import AvatarImage from './stories/avatar.jpg';
+import Avatar2Image from './stories/avatar2.webp';
+import ErasmusImage from './stories/erasmus.jpg';
+import PolitieImage from './stories/politie.jpg';
 
 export default function Home() {
-    const LeftContent = props => <Avatar.Image {...props} source={require('./stories/avatar.jpg')} />;
+    const LeftContent = props => <Avatar.Image {...props} source={AvatarImage} />;
     const [visible, setVisible] = React.useState(false);
 
-    const showModal = () => setVisible(true);
     const hideModal = () => setVisible(false);
     const [visibleUpload, setVisibleUpload] = React.useState(false);
 
-    const showUpload = () => setVisibleUpload(true);
     const hideUpload = () => setVisibleUpload(false);
     const containerStyle = {backgroundColor: 'white', padding: 20};
 
@@ -19,18 +24,18 @@ export default function Home() {
         <PaperProvider>
  
             <ScrollView horizontal={true}>
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story1.jpg')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story2.jpg')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story3.png')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story4.png')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story1.jpg')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story2.jpg')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story3.png')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story4.png')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story1.jpg')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story2.jpg')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story3.png')} />
-                <Avatar.Image  style = {styles.stories} size={50} source={require('./stories/story4.png')} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story1} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story2} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story3} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story4} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story1} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story2} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story3} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story4} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story1} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story2} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story3} />
+                <Avatar.Image  style = {styles.stories} size={50} source={Story4} />
             </ScrollView>
             <ScrollView>
                 <Portal>
@@ -52,7 +57,7 @@ export default function Home() {
                 </Portal>
                 <Card style={{marginBottom: 10}}>
                     <Card.Title title="Jimmy_n" subtitle="The Erasmus bridge was closed until afternoon.." left={LeftContent} />
-                    <Card.Cover style={{padding: 15}} source={require('./stories/erasmus.jpg')} />
+                    <Card.Cover style={{padding: 15}} source={ErasmusImage} />
                     <Card.Content style={{flexDirection: 'row' }}>
                         <Icon
                             source="star"
@@ -73,8 +78,8 @@ export default function Home() {
                 </Card>
                 <Divider />
                 <Card style={{marginBottom: 10}}>
-                    <Card.Title title="ConnectXplorer" subtitle="Policemen arresting a man that was causing... " left={props => <Avatar.Image {...props} source={require('./stories/avatar2.webp')} />} />
-                    <Card.Cover style={{padding: 15}} source={require('./stories/politie.jpg')} />
+                    <Card.Title title="ConnectXplorer" subtitle="Policemen arresting a man that was causing... " left={props => <Avatar.Image {...props} source={Avatar2Image} />} />
+                    <Card.Cover style={{padding: 15}} source={PolitieImage} />
                     <Card.Content style={{flexDirection: 'row' }}>
                         <Icon
                             source="star"
@@ -96,7 +101,7 @@ export default function Home() {
                 <Divider />
                 <Card style={{marginBottom: 10}}>
                     <Card.Title title="Jimmy_n" subtitle="The Erasmus bridge was closed until afternoon.." left={LeftContent} />
-                    <Card.Cover style={{padding: 15}} source={require('./stories/erasmus.jpg')} />
+                    <Card.Cover style={{padding: 15}} source={ErasmusImage} />
                     <Card.Content style={{flexDirection: 'row' }}>
                         <Icon
                             source="star"
@@ -116,8 +121,8 @@ export default function Home() {
                     </Card.Content>
                 </Card>
                 <Card style={{marginBottom: 10}}>
-                    <Card.Title title="ConnectXplorer" subtitle="Policemen arresting a man that was causing... " left={props => <Avatar.Image {...props} source={require('./stories/avatar2.webp')} />} />
-                    <Card.Cover style={{padding: 15}} source={require('./stories/politie.jpg')} />
+                    <Card.Title title="ConnectXplorer" subtitle="Policemen arresting a man that was causing... " left={props => <Avatar.Image {...props} source={Avatar2Image} />} />
+                    <Card.Cover style={{padding: 15}} source={PolitieImage} />
                     <Card.Content style={{flexDirection: 'row' }}>
                         <Icon
                             source="star"
